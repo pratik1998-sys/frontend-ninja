@@ -1,0 +1,94 @@
+.navbar {
+  height: 75px;
+  padding: 0 2rem;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  @media screen and (max-width: 426px) {
+    height: 50px;
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 100px;
+    padding: 0 3rem;
+  }
+  @media screen and (min-width: 2000px) {
+    height: 120px;
+    padding: 1rem 4rem;
+  }
+
+  .navbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .navbar_logo {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      cursor: pointer;
+
+      @media screen and (max-width: 426px) {
+        justify-content: center;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        background-color: transparent !important;
+
+        @media screen and (max-width: 426px) {
+          height: 40px;
+          width: 40px;
+        }
+        @media screen and (min-width: 1440px) {
+          height: 70px;
+          width: 70px;
+        }
+      }
+      .navbar_heading {
+        @media screen and (max-width: 426px) {
+          display: none;
+        }
+        @media screen and (min-width: 426px) and (max-width: 768px) {
+          font-size: 16px;
+        }
+        @media screen and (min-width: 1441px) {
+          font-size: 30px;
+        }
+        @media screen and (min-width: 1441px) {
+          font-size: 40px;
+          margin-left: 2rem;
+        }
+      }
+    }
+    .navbar_progress_bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex: 2;
+
+      h4 {
+        font-size: 20px;
+        @media screen and (max-width: 426px) {
+          display: none;
+        }
+        @media screen and (min-width: 426px) and (max-width: 768px) {
+          font-size: 14px;
+        }
+        @media screen and (min-width: 1441px) {
+          font-size: 25px;
+        }
+        @media screen and (min-width: 1441px) {
+          font-size: 40px;
+        }
+      }
+
+      @media screen and (max-width: 426px) {
+        flex: 3;
+      }
+    }
+  }
+}
