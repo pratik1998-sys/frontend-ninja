@@ -6,6 +6,7 @@ import Home from './Home/Home'
 import Progress from './ProgressBar/ProgressBar'
 import VerticalTimelineComponent from './VerticalTimelineComponent/VerticalTimelineComponent'
 import SingleTopic from './SingleTopic/SingleTopic'
+import Model from './Model/Model'
 
 export {
   Footer,
@@ -16,4 +17,5 @@ export {
   Progress,
   VerticalTimelineComponent,
   SingleTopic,
+  Model,
 }

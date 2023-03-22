@@ -6,9 +6,19 @@ import 'react-vertical-timeline-component/style.min.css'
 import StarWrapper from '../../hoc/SectionWrapper'
 import { textVariant } from '../../utils/motion'
 import VerticalTimelineComponent from '../VerticalTimelineComponent/VerticalTimelineComponent'
+import { Model } from '../index'
+import { useState } from 'react'
 
 const Home = () => {
   const { content } = useSelector((state) => state.content)
+  const { showModel } = useSelector((state) => state.content)
+
+  if (showModel)
+    return (
+      <div className='home'>
+        <Model />
+      </div>
+    )
 
   return (
     <div className='home'>

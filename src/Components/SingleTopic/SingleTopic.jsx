@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { calculateProgress, setFirst } from '../../features/videoSlice'
+import {
+  calculateProgress,
+  setFirst,
+  setModel,
+  setCurrentTopic,
+} from '../../features/videoSlice'
 
 const SingleTopic = ({ id, video }) => {
   const myContent = JSON.parse(localStorage.getItem('completedTopics'))
@@ -24,9 +29,13 @@ const SingleTopic = ({ id, video }) => {
         setCurrentStatus(true)
         newArray = [...newArray, { id: id, watched: true }]
       }
+      dispatch(setCurrentTopic(video.topic))
+      dispatch(setModel(true))
       dispatch(calculateProgress(newArray.length))
       localStorage.setItem('completedTopics', JSON.stringify([...newArray]))
     } else {
+      dispatch(setCurrentTopic(video.topic))
+      dispatch(setModel(true))
       setCurrentStatus(true)
       dispatch(setFirst(id))
       dispatch(calculateProgress(1))
